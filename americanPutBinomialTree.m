@@ -1,4 +1,5 @@
 function [ P ] = americanPutBinomialTree( S, K, r, sigma, T, n )
+
 % Input arguments: S = asset price at time t
 %                  K = Strike price
 %                  r = interest rate
@@ -44,4 +45,3 @@ end
 P = V(1);
 
 end
-
