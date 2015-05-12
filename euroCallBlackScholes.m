@@ -6,6 +6,9 @@ function [ C, P ] = euroCallBlackScholes( S, K, r, sigma, tau )
 %                  tau = time to expiry (T-t) 
 % Outputs: C = Call Value
 %          P = Put Value
+%
+% Example call:
+% [c p] = euroCallBlackScholes(100, 100, 0.05, 0.2, 1)
 
 % First compute d_one and d_two
 d1 = (log(S/K) + (r + 0.5 * sigma ^ 2) * (tau))/( sigma * sqrt(tau));

@@ -6,6 +6,9 @@ function [ P ] = euroPutBinomialTree( S, K, r, sigma, T, n )
 %                  tau = time to expiry (T-t) 
 %                  n = number of steps
 % Outputs: P = Put Value
+%
+% Example call:
+% p = euroPutBinomialTree(100, 100, 0.05, 0.2, 1, 400)
 
 % Time step
 dt = T / n;

@@ -6,9 +6,12 @@ function [ C ] = euroCallMonteCarlo( S, K, r, sigma, tau, N )
 %                  tau = time to expiry (T-t) 
 %                  N = number of simulations
 % Outputs: C = Call Value
+%
+% Example call:
+% c = euroCallMonteCarlo(100, 100, 0.05, 0.2, 1, 1000)
 
-% Seed the random number generator
-rng(0)
+% Seed the random number generator to repeat
+randn('state', 0); 
 
 % Generate a range of final asset prices
 final_S = S * exp((r - 0.5 * sigma ^ 2) * tau + sigma * sqrt(tau) * randn(N,1));

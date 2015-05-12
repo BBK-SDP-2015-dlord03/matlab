@@ -7,6 +7,9 @@ function [ V ] = euroBarrierBinomialTree( S, K, r, sigma, T, n, B )
 %                  n = number of steps
 %                  B = barrier price
 % Outputs: V = Barrier Option Value
+%
+% Example call:
+% v = euroBarrierBinomialTree(100, 100, 0.05, 0.2, 1, 400, 80)
 
 % Time step
 dt = T / n;
